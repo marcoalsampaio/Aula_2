@@ -2,12 +2,16 @@ package com.example.aula_2
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         println("Life cycle: onCreate")
+
+        Toast.makeText(this, R.string.hello, Toast.LENGTH_LONG).show() //Aceder pelo Resources
+        //Manter strings no ficheiros das strings e usar as keys
     }
 
     override fun onStart() {
@@ -39,4 +43,6 @@ class MainActivity : AppCompatActivity() {
         super.onDestroy()
         println("Life cycle: onDestroy")
     }
+
+    //Multi Lingua
 }
